@@ -1,0 +1,98 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--dark-slate-grey);
+}
+.heading{
+    margin-top: 60px;
+    font: icon;
+    font-size: 30px;
+}
+p{
+    color: var(--grey);
+    font-size: 16px;
+    margin: 7px 0 7px 0;
+}
+.updates{
+    display: flex;
+    column-gap: 5px;
+}
+.background{
+    display: grid;
+    place-items: center;
+    margin-top: 140px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 56% 0%;
+    width: 700px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+}
+.content{
+    margin: 0px 20px 0px 15px;
+}
+section{
+    background-color: var(--white);
+}
+.img2{
+    height: 450px;
+}
+h5{
+    margin: 20px 0 0 0;
+}
+.input1{
+    border-radius: 5px;
+    height: 35px;
+    width: 300px;
+    background-color: rgb(249, 193, 193);
+    border-color: var(--Tomato);
+}
+.input2{
+    margin-top: 15px;
+    height: 40px;
+    width: 307px;
+    border-radius: 5px;
+    background-color: var(--dark-slate-grey);
+}
+span{
+    color: var(--Tomato);
+    margin: 20px 0 0 0;
+}
+.unsuccess{
+    display: flex;
+    gap: 90px;
+}
+
+
+            /* success */
+.container2{
+    display: none;
+    background-color: var(--white);
+    width: 300px;
+    border-radius: 10px;
+    padding: 40px;
+    display: none;
+    margin: 160px auto;
+}
+b{
+    color: rgb(70, 66, 66);
+}
+button{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--dark-slate-grey);
+}
+
+            /* mobile */
+
+@media (max-width:375px) {
+    
+}

@@ -12,6 +12,8 @@
         <title>
             Frontend Mentor | Newsletter sign-up form with success message
         </title>
+        <link rel="stylesheet" href="source/style.css" />
+        <script src="source/script.js"></script>
         <style>
             .attribution {
                 font-size: 11px;
@@ -24,32 +26,37 @@
     </head>
 
     <body>
-        <div class="container">
-            <section class="content">
-                <h1>Stay updated!</h1>
-                <div class="sign-up">
-                  <div>
-                    <img src="assets/images/icon-list.svg" alt="">
-                    <p>
-                        Join 60,000+ product managers receiving monthly updates
-                        on:
-                    </p>
-                  </div>
-                  <div>
-                    <img src="assets/images/icon-list.svg" alt="">
-                    <p>Product discovery and building what matters</p>
-                  </div>
-                  <div>
-                    <img src="assets/images/icon-list.svg" alt="">
-                    <p>Measuring to ensure updates are a success</p>
-                  </div>
-                    <p>And much more!</p>
-                </div>
-                <form action="" class="gmail">
-                    <h2>Email address</h2>
-                    email@company.com
-                    <button>Subscribe to monthly newsletter</button>
-                </form>
+        <div class="background" id="done">
+            <div class="container">
+                <section class="content">
+                    <h1 class="heading"><b>Stay updated!</b></h1>
+                    <div class="sign-up">
+                        <p>
+                            Join 60,000+ product managers receiving monthly
+                            updates on:
+                        </p>
+                        <div class="updates">
+                            <img src="assets/images/icon-list.svg" alt="" />
+                            <p>Product discovery and building what matters</p>
+                        </div>
+                        <div class="updates">
+                            <img src="assets/images/icon-list.svg" alt="" />
+                            <p>Measuring to ensure updates are a success</p>
+                        </div>
+                        <div class="updates">
+                            <img src="assets/images/icon-list.svg" alt="" />
+                            <p>And much more!</p>
+                        </div>
+                    </div>
+                    <form action="" onsubmit="event.preventDefault(); return sign()" class="gmail" id="sign-up">
+                        <div class="unsuccess">
+                            <h5>Email address</h5>
+                            <span id="error"></span>
+                        </div>
+                        <input id="email" class="input1" type="text" name="email" oninput="resetError()" placeholder="email@company.com" />
+                        <input class="input2" type="submit" value="Subscribe to monthly newsletter">
+                    </form>
+                </section>
                 <section class="image">
                     <picture>
                         <source
@@ -57,27 +64,28 @@
                             srcset="
                                 assets/images/illustration-sign-up-mobile.svg
                             "
-                            media="(max-width:480px)"
+                            media="(max-width:375px)"
                         />
                         <img
+                        class="img2"
                             src="assets/images/illustration-sign-up-desktop.svg"
                             alt=""
                         />
                     </picture>
                 </section>
-            </section>
+            </div>
         </div>
 
-        <div class="container2">
+        <div class="container2" id="success">
             <div>
-              <img src="assets/images/icon-success.svg" alt="">
-              <h1>Thanks for subscribing!</h1>
-            <p>
-                A confirmation email has been sent to
-                <b>ash@loremcompany.com.</b> Please open it and click the button
-                inside to confirm your subscription.
-            </p>
-            <button>Dismiss message</button>
+                <img src="assets/images/icon-success.svg" alt="" />
+                <h1>Thanks for subscribing!</h1>
+                <p class="login">
+                    A confirmation email has been sent to
+                    <b>ash@loremcompany.com.</b> Please open it and click the
+                    button inside to confirm your subscription.
+                </p>
+                <button onclick="dismiss()">Dismiss message</button>
             </div>
         </div>
     </body>
