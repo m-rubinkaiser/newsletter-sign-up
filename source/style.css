@@ -5,29 +5,29 @@
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
 }
-body{
+body {
     background-color: var(--dark-slate-grey);
 }
-.heading{
+.heading {
     margin-top: 60px;
     font: icon;
     font-size: 30px;
 }
-p{
+p {
     color: var(--grey);
     font-size: 16px;
     margin: 7px 0 7px 0;
 }
-.updates{
+.updates {
     display: flex;
     column-gap: 5px;
 }
-.background{
+.background {
     display: grid;
     place-items: center;
     margin-top: 140px;
 }
-.container{
+.container {
     display: grid;
     grid-template-columns: 56% 0%;
     width: 700px;
@@ -35,44 +35,43 @@ p{
     padding: 20px;
     border-radius: 10px;
 }
-.content{
+.content {
     margin: 0px 20px 0px 15px;
 }
-section{
+section {
     background-color: var(--white);
 }
-.img2{
+.img2 {
     height: 450px;
 }
-h5{
+h5 {
     margin: 20px 0 0 0;
 }
-.input1{
+.input1 {
     border-radius: 5px;
     height: 35px;
     width: 300px;
     background-color: rgb(249, 193, 193);
     border-color: var(--Tomato);
 }
-.input2{
+.input2 {
     margin-top: 15px;
     height: 40px;
     width: 307px;
     border-radius: 5px;
     background-color: var(--dark-slate-grey);
 }
-span{
+span {
     color: var(--Tomato);
     margin: 20px 0 0 0;
 }
-.unsuccess{
+.unsuccess {
     display: flex;
     gap: 90px;
 }
 
-
-            /* success */
-.container2{
+/* success */
+.container2 {
     display: none;
     background-color: var(--white);
     width: 300px;
@@ -81,18 +80,49 @@ span{
     display: none;
     margin: 160px auto;
 }
-b{
+b {
     color: rgb(70, 66, 66);
 }
-button{
+button {
     height: 40px;
     width: 300px;
     border-radius: 10px;
     background-color: var(--dark-slate-grey);
 }
 
-            /* mobile */
+/* mobile */
 
-@media (max-width:375px) {
-    
+@media (max-width: 375px) {
+    .background {
+        margin: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 0;
+        margin: 0;
+        width: 375px;
+    }
+    .container section:nth-of-type(1) {
+        order: 2;
+    }
+
+    .container section:nth-of-type(2) {
+        order: 1;
+    }
+    .img2 {
+        width: 375px;
+        height: auto;
+    }
+    input{
+        display: block;
+        margin: auto;
+    }
+    .input1{
+        height: 50px;
+    }
+    .input2{
+        height: 50px;
+        margin-bottom: 10px;
+    }
 }
