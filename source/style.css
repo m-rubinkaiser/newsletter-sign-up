@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'roboto'; 
+    src: url(Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'roboto-bold';     
+    src: url(Roboto-Bold.ttf);
+}
 :root {
     --Tomato: hsl(4, 100%, 67%);
     --dark-slate-grey: hsl(234, 29%, 20%);
@@ -9,14 +17,17 @@ body {
     background-color: var(--dark-slate-grey);
 }
 .heading {
-    margin-top: 60px;
-    font: icon;
     font-size: 35px;
+    margin: 35px 0 30px 0;
+}
+h1{
+    font-family:'roboto-bold';
 }
 p {
+    font-family: 'roboto';
     color: var(--grey);
     font-size: 16px;
-    margin: 7px 0 7px 0;
+    margin: 10px 0 10px 0;
 }
 .updates {
     display: flex;
@@ -45,7 +56,7 @@ section {
     height: 450px;
 }
 h5 {
-    margin: 20px 0 0 0;
+    margin: 20px 0 5px 0;
 }
 .input1 {
     border-radius: 5px;
@@ -61,6 +72,9 @@ h5 {
     border-radius: 5px;
     background-color: var(--dark-slate-grey);
     color: var(--white);
+}
+input,button{
+    font-family: 'roboto';
 }
 span {
     color: var(--Tomato);
@@ -105,14 +119,15 @@ button {
         margin: 0;
         width: 100%;
     }
-    h1{
-        margin-bottom: 40px;
-    }
     .updates{
         margin-top: 20px;
     }
-    p{
-        font-size: 15px;
+    .img2{
+        width: 100%;
+        height: 100%;
+    }
+    picture{
+        display: block;
     }
     .unsuccess{
         margin-bottom: 10px;
@@ -130,10 +145,6 @@ button {
     .container section:nth-of-type(2) {
         order: 1;
     }
-    .img2 {
-        width: 100%;
-        height: 100%;
-    }
     input{
         display: block;
         margin: auto;
@@ -143,7 +154,7 @@ button {
     }
     .input2{
         height: 67px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     .unsuccess{
         margin-left: 8%;
