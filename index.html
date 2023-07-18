@@ -59,9 +59,9 @@
                             <h5>Email address</h5>
                             <span id="error"></span>
                         </div>
-                        <input id="email" class="input1" type="text" name="email" oninput="resetError()" placeholder="email@company.com" />
+                        <input onfocus="gmail()" id="email" class="input1" type="text" name="email" oninput="resetError()" placeholder="email@company.com" />
                         
-                        <input class="input2" type="submit" value="Subscribe to monthly newsletter">
+                        <button class="input2">Subscribe to monthly newsletter</button>
                     </form>
                 </section>
 
@@ -98,7 +98,7 @@
                         <b>ash@loremcompany.com.</b> Please open it and click the
                         button inside to confirm your subscription.
                     </p>
-                    <button onclick="dismiss()">Dismiss message</button>
+                    <button class="button" onclick="dismiss()">Dismiss message</button>
                 </div>
             </div>
         </div>

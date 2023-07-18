@@ -13,10 +13,51 @@
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
 }
+
+            /* css reset */
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+textarea,
+select {
+    font: inherit;
+}
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+            /*            */
 body {
     background-color: var(--dark-slate-grey);
     height: 100vh;
-    margin: 0;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 .heading {
     font-size: 35px;
@@ -65,9 +106,11 @@ h5 {
     border-radius: 5px;
     height: 35px;
     width: 300px;
-    background-color: rgb(231, 241, 244);
+    background-color: var(--white);
+    border: solid gray 2px;
 }
 .input2 {
+    cursor: pointer;
     margin-top: 15px;
     height: 40px;
     width: 307px;
@@ -103,7 +146,7 @@ span {
 b {
     color: rgb(70, 66, 66);
 }
-button {
+.button {
     height: 50px;
     width: 300px;
     border-radius: 10px;
@@ -113,7 +156,7 @@ button {
 
 /* mobile */
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     *{
         margin: 0;
     }
@@ -141,7 +184,11 @@ button {
         display: block;
     }
     .unsuccess{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+    .unsuccess>span{
+        width: 120px;
     }
     span{
         font-size: 12px;
@@ -156,18 +203,16 @@ button {
     .container section:nth-of-type(2) {
         order: 1;
     }
-    input{
+    input,.input2{
         display: block;
         margin: auto;
     }
     .input1{
         height: 60px;
+        margin-bottom: 20PX;
     }
     .input2{
         height: 67px;
         margin-bottom: 25px;
-    }
-    .unsuccess{
-        margin-left: 8%;
     }
 }
